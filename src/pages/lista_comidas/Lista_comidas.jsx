@@ -91,16 +91,16 @@ const Lista = () => {
         {groupedData.map((group, index) => (
           <div className="card-group" key={index}>
             {group.map((comida) => (
-              <div className="card-comida" key={comida.id}>
-                <div className="img">
+              <div className="card-comida flex justify-center items-center" key={comida.id}>
+                <div className="img h-full">
                   <img src={comida.fileUrl} className="img-comida" />
                 </div>
                 <div className="texto">
-                  <h2>{comida.nombre}</h2>
+                  <h2 className="text-2xl font-bold pb-4">{comida.nombre}</h2>
                   <p>{comida.Categorium.nombre}</p>
-                  <p>S/ {comida.precio}</p>
+                  <p className=" font-bold">S/ {comida.precio}</p>
                 </div>
-                <div className="funciones">
+                <div className="funciones flex h-full pt-[2%] pb-[2%]">
                   <Link to={`/editar/${comida.id}`}>
                     <BiIcons.BiEdit className="funcion" />
                   </Link>

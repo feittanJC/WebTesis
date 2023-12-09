@@ -109,7 +109,7 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="buttonSesion p-button p-component"
+                className="buttonSesion bg-[#00AEEF] p-button p-component"
               >
                 Iniciar Sesión
               </button>

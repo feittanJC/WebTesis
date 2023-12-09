@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Login, Lista, Agregar,Editar, Lista_Categorias } from "../pages"
+import { Login, Lista, Agregar,Editar, Lista_Categorias, Pagos } from "../pages"
 
 const Router = () =>{
     return (
@@ -10,6 +10,7 @@ const Router = () =>{
                 <Route path="/agregar" element={<Agregar/>}/>
                 <Route path="/editar/:id" element={<Editar/>}/>
                 <Route path="/categorias" element={<Lista_Categorias/>}/>
+                <Route path="/pagos" element={<Pagos/>}/>
             </Routes>
         </BrowserRouter>
     );
