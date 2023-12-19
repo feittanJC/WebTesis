@@ -1,3 +1,3 @@
 export const enviroment = {
-    url:"http://localhost:4000"
+    url:"http://apitesis-production.up.railway.app"
 }
