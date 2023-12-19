@@ -22,8 +22,8 @@ export default function TablaPagos({handleClick,data }) {
         {data.data && data.data.map((factura) => (
           <tr key={factura.factura_id} className='border-black border-b rounded-2xl'>
             <td className='py-4 text-center'>{factura.factura_id}</td>
-            <td className='py-4 text-center'>{factura.user_email || 'N/A'}</td>
-            <td className='py-4 text-center'>{factura.total}</td>
+            <td className='py-4 text-center font-bold'>{factura.user_email || 'N/A'}</td>
+            <td className='py-4 text-center'>S/ {factura.total}</td>
             <td className='py-4 flex justify-center items-center'>
               <FaInfoCircle className='text-xl cursor-pointer' onClick={() => handleClick(factura.factura_id)} />
             </td>

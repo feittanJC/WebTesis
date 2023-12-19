@@ -47,9 +47,9 @@ export default function DetallesPago({ facturaId, data }) {
         <tbody>
           {factura.detalles.map((detalle) => (
             <tr key={detalle.detalleId}>
-              <td className='py-4 text-center'>{comidas[detalle.comidaId] || 'Cargando...'}</td>
+              <td className='py-4 text-center font-bold'>{comidas[detalle.comidaId] || 'Cargando...'}</td>
               <td className='py-4 text-center'>{detalle.cantidad}</td>
-              <td className='py-4 text-center'>{detalle.total}</td>
+              <td className='py-4 text-center'>S/ {detalle.total}</td>
             </tr>
           ))}
         </tbody>
