@@ -141,16 +141,17 @@ const Lista_Categorias = () => {
       </div>
       {showModal && (
         <div className="modal">
-          <div className="modal-content">
-            <div className="boton-div">
+          <div className="bg-white w-[40%] h-[35%] rounded-md">
+            <div className="boton-div pt-4 pr-4">
               <button className="cerrar" onClick={showModalView}>
                 X
               </button>
             </div>
-            <h2>Agregar categoría</h2>
+            <h2 className="font-bold text-xl pb-12 text-center">Agregar categoría</h2>
             {/* Aquí puedes agregar los campos y elementos necesarios para agregar una categoría */}
-            <form className="form-categoria" onSubmit={handleForm}>
+            <form className="flex flex-col items-center justify-center" onSubmit={handleForm}>
               <input
+                className="border border-black px-3 py-2"
                 type="text"
                 name="nombre"
                 id="nombre"
@@ -159,7 +160,7 @@ const Lista_Categorias = () => {
                 onChange={handleInputChange}
               />
               {/* Otros campos y elementos */}
-              <button type="submit" className="agregar">
+              <button type="submit" className="bg-blue-500 mt-4 px-4 py-2 rounded-md border-none hover:bg-blue-700">
                 Guardar
               </button>
             </form>
