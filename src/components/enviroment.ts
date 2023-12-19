@@ -1,3 +1,3 @@
 export const enviroment = {
-    url:"http://apitesis-production.up.railway.app"
+    url:"https://apitesis-production.up.railway.app"
 }
