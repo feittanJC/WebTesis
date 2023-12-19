@@ -167,20 +167,20 @@ const Lista_Categorias = () => {
         </div>
       )}
       ;
-      <div className="table">
+      <div className="flex justify-center items-center">
         <table>
-          <tr>
+          <tr className="text-center">
             <th>ID</th>
             <th>Nombre</th>
             <th>Dia de creación</th>
-            <th></th>
+            <th>Acciones</th>
           </tr>
           {categorias?.map((categoria) => (
-            <tr key={categoria.id_categoria}>
-              <td>{categoria.id_categoria} </td>
+            <tr key={categoria.id_categoria} className="text-center">
+              <td className="py-3">{categoria.id_categoria} </td>
               <td>{categoria.nombre} </td>
               <td>{categoria.createdAt} </td>
-              <td>
+              <td className="flex justify-center items-center py-3">
                 <BiIcons.BiEdit className="funcion" onClick={showEditModal} />
                 <AiIcons.AiFillDelete
                   className="funcion"

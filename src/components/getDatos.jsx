@@ -9,10 +9,14 @@ export default function useApiData(apiUrl) {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(apiUrl);
-          setData(response.data);
+          const response = await fetch(apiUrl);
+          if (!response.ok) {
+            throw new Error(`Error: ${response.status}`);
+          }
+          const data = await response.json();
+          setData(data);
         } catch (error) {
-          setError(error);
+          setError(error.message || 'Something went wrong');
         } finally {
           setLoading(false);
         }
